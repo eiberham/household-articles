@@ -36,8 +36,8 @@ export default {
 .button {
   background: #fff;
   border: 2px #f7f6f2 solid;
-  border-radius: 8px;
-  padding: 8px;
+  border-radius: 4px;
+  padding: 12px;
   color: #000;
   font: {
     size: 16px;
@@ -66,8 +66,8 @@ export default {
       content: "";
       display: block;
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 4px;
+      left: 4px;
       width: 16px;
       height: 16px;
     }
@@ -88,8 +88,8 @@ export default {
       content: "";
       display: block;
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 4px;
+      left: 4px;
       width: 16px;
       height: 16px;
     }
@@ -98,15 +98,15 @@ export default {
   &.move {
     position: relative;
     width: 40px;
-    height: 40px;
+    height: 56px;
     min-width: unset;
 
     &::after {
       background: {
         image: url("../assets/icons/arrow.svg");
         repeat: no-repeat;
-        position: center center;
-        size: 36px 36px;
+        position: top center;
+        size: 36px 56px;
       }
 
       content: "";
@@ -115,7 +115,8 @@ export default {
       top: 0;
       left: 0;
       width: 36px;
-      height: 36px;
+      height: 56px;
+      transform: rotate(45deg);
     }
   }
 }

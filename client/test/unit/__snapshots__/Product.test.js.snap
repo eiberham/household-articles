@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product matches snapshot 1`] = `
+<section
+  class="opening"
+>
+  <div
+    class="product-list hide"
+  >
+    <div
+      class="product-list__toggle"
+      role="button"
+    >
+      <i
+        class="toggle-icon"
+      />
+    </div>
+     
+    <h1
+      class="product-list__title"
+    >
+      
+      Equipment
+    
+    </h1>
+     
+    <div
+      class="product-list__item"
+    >
+      
+        Puertas
+      
+    </div>
+    <div
+      class="product-list__item"
+    >
+      
+        Ventanas
+      
+    </div>
+  </div>
+   
+  <div
+    class="actions"
+  >
+    <div
+      class="config"
+    >
+      <button
+        class="button"
+        type="button"
+      >
+        
+        Fijar
+      
+      </button>
+       
+      <button
+        class="button"
+        type="button"
+      >
+        
+        Borrar
+      
+      </button>
+    </div>
+     
+    <div
+      class="control"
+    >
+      <div
+        class="control-zoom"
+      >
+        <button
+          class="button plus"
+          type="button"
+        />
+         
+        <button
+          class="button minus"
+          type="button"
+        />
+      </div>
+       
+      <div
+        class="control-move"
+      >
+        <button
+          class="button move"
+          type="button"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heeader matches snapshot 1`] = `
+<section
+  class="header"
+>
+  <select>
+    <option>
+      Guardar y salir
+    </option>
+     
+    <option>
+      Salir sin guardar
+    </option>
+     
+    <option>
+      Guardar y continuar
+    </option>
+  </select>
+</section>
+`;

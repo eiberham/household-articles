@@ -272,6 +272,10 @@ export default {
         align-items: center;
         justify-content: center;
       }
+
+      &-move {
+        margin: 0 0 0 8px;
+      }
     }
   }
 }

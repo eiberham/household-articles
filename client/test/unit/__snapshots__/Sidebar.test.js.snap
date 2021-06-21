@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar matches snapshot 1`] = `
+<section
+  class="sidebar"
+>
+  <nav
+    class="menu"
+  >
+    <ul
+      class="menu__wrapper"
+      role="list"
+    >
+      <li
+        class="menu__item opening"
+        data-name="opening"
+      >
+        
+        Opening
+      
+      </li>
+       
+      <li
+        class="menu__item equipment"
+        data-name="equipment"
+      >
+        
+        Equipment
+      
+      </li>
+       
+      <li
+        class="menu__item ending"
+        data-name="ending"
+      >
+        
+        Ending
+      
+      </li>
+    </ul>
+  </nav>
+</section>
+`;

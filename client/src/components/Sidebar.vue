@@ -1,7 +1,7 @@
 <template>
   <section class="sidebar">
     <nav class="menu">
-      <ul class="menu__wrapper">
+      <ul class="menu__wrapper" role="list">
         <li v-active class="menu__item opening" data-name="opening">
           Opening
         </li>

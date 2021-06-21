@@ -7,7 +7,7 @@
     "dev": "npm-run-all --parallel dev:*",
     "dev:client": "webpack serve --mode development",
     "dev:server": "nodemon ./server/index.js ",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:unit": "jest",
     "prod": "webpack --mode production"
   },
   "author": "Abraham Cedeño",
@@ -25,6 +25,8 @@
     "@babel/preset-env": "^7.12.11",
     "@vue/test-utils": "^1.2.1",
     "autoprefixer": "^10.2.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^27.0.2",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
@@ -35,6 +37,10 @@
     "eslint-plugin-vue": "^7.11.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.1",
+    "jest": "^27.0.4",
+    "jest-serializer-vue": "^2.0.2",
+    "jsdom": "^16.6.0",
+    "jsdom-global": "^3.0.2",
     "mini-css-extract-plugin": "^1.3.4",
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7",
@@ -47,6 +53,7 @@
     "vue-jest": "^3.0.7",
     "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.12",
+    "vue-test-utils": "^1.0.0-beta",
     "webpack": "^5.17.0",
     "webpack-cli": "^4.4.0",
     "webpack-dev-server": "^3.11.2"
@@ -57,13 +64,32 @@
     "not dead"
   ],
   "jest": {
+    "setupFiles": [
+      "./client/src/__mocks__/client.js"
+    ],
     "moduleFileExtensions": [
       "js",
       "json",
       "vue"
     ],
     "transform": {
-      ".*\\.(vue)$": "vue-jest"
-    }
+      ".*\\.(vue)$": "vue-jest",
+      ".*\\.(js)$": "babel-jest",
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "main.js"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js,vue}",
+      "!**/*.config.js",
+      "!**/(node_modules|coverage|server)/**"
+    ],
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "verbose": true,
+    "testURL": "http://localhost/"
   }
 }
