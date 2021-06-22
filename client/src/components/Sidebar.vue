@@ -49,16 +49,34 @@ export default {
 </script>
 
 <style lang="scss">
+@mixin menuitem_icon($url) {
+  &::before {
+    background: {
+      image: url($url);
+      position: center center;
+      repeat: no-repeat;
+      size: 32px 32px;
+    }
+    content: "";
+    display: block;
+    height: 32px;
+    left: 32px;
+    position: absolute;
+    top: 25px;
+    width: 32px;
+  }
+}
+
 .sidebar {
+  align-items: center;
   background: #fff;
+  display: flex;
+  flex-direction: column;
   grid: {
     area: sidebar;
     column: 1 / 2;
   }
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
 
   .menu {
     width: 100%;
@@ -70,20 +88,20 @@ export default {
     }
 
     &__item {
+      align-items: flex-end;
       background: #fff;
       color: #000;
       display: flex;
+      height: 70px;
       justify-content: center;
-      align-items: flex-end;
       line-height: 1.5;
       padding: 12px 0;
+      position: relative;
       text: {
         align: center;
         decoration: none;
       }
       width: 100%;
-      position: relative;
-      height: 70px;
 
       &:hover {
         cursor: pointer;
@@ -94,57 +112,15 @@ export default {
       }
 
       &.opening {
-        &::before {
-          background: {
-            image: url("../assets/icons/opening.png");
-            repeat: no-repeat;
-            position: center center;
-            size: 32px 32px;
-          }
-          content: "";
-          display: block;
-          position: absolute;
-          top: 25px;
-          left: 32px;
-          width: 32px;
-          height: 32px;
-        }
+        @include menuitem_icon("../assets/icons/opening.png");
       }
 
       &.ending {
-        &::before {
-          background: {
-            image: url("../assets/icons/ending.png");
-            repeat: no-repeat;
-            position: center center;
-            size: 32px 32px;
-          }
-          content: "";
-          display: block;
-          position: absolute;
-          top: 25px;
-          left: 32px;
-          width: 32px;
-          height: 32px;
-        }
+        @include menuitem_icon("../assets/icons/ending.png");
       }
 
       &.equipment {
-        &::before {
-          background: {
-            image: url("../assets/icons/equipment.png");
-            repeat: no-repeat;
-            position: center center;
-            size: 32px 32px;
-          }
-          content: "";
-          display: block;
-          position: absolute;
-          top: 25px;
-          left: 32px;
-          width: 32px;
-          height: 32px;
-        }
+        @include menuitem_icon("../assets/icons/equipment.png");
       }
     }
   }

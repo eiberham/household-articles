@@ -64,11 +64,11 @@ export default {
                             "sidebar content";
             gap: 0;
         }
+        margin: 0;
         min: {
             height: 100vh;
             width: 100%;
         }
-        margin: 0;
         padding: 0;
     }
 </style>

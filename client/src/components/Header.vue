@@ -23,33 +23,31 @@ export default {
 
 <style lang="scss">
 .header {
+  align-items: center;
   background: #9a9996;
   color: #fff;
+  display: flex;
   grid: {
     area: header;
     column: 1 / -1;
   }
-
   height: 100px;
-
-  display: flex;
-  padding: 0 140px;
   justify-content: flex-end;
-  align-items: center;
+  padding: 0 140px;
 
   &::before {
     background: {
       image: url("../assets/icons/home.svg");
-      repeat: no-repeat;
       position: center center;
+      repeat: no-repeat;
       size: 32px 32px;
     }
     content: "";
     display: block;
+    height: 32px;
+    left: 140px;
     position: absolute;
     top: 30px;
-    left: 140px;
-    height: 32px;
     width: 32px;
   }
 }

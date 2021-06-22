@@ -115,21 +115,21 @@ export default {
 <style lang="scss">
 .opening {
   background: #e5e8eb;
+  color: #000;
   display: grid;
   grid: {
-    template-columns: repeat(auto-fit, minmax(460px, 1fr));
-    auto-columns: repeat(auto-fit, minmax(460px, 1fr));
     area: content;
+    auto-columns: repeat(auto-fit, minmax(460px, 1fr));
     column: 2 / -1;
+    template-columns: repeat(auto-fit, minmax(460px, 1fr));
   }
-  color: #000;
   min-height: 100%;
 
   .product-list {
+    align-items: center;
     background-color: #f7f6f2;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
     padding: 0 1rem;
     position: relative;
@@ -141,27 +141,20 @@ export default {
     }
 
     &.hide {
-      width: 0;
       opacity: 0;
       transition: width 0s linear 1s;
+      width: 0;
     }
 
     &__toggle {
-      position: absolute;
-      right: -16px;
-      top: 50%;
       background: {
         color: #f7f6f2;
         image: url("../assets/icons/active.png");
-        repeat: no-repeat;
         position: center center;
+        repeat: no-repeat;
         size: 16px 16px;
       }
-
       content: "";
-      display: block;
-      width: 16px;
-      height: 48px;
       clip-path: polygon(
         30% 0%,
         0 0,
@@ -172,6 +165,12 @@ export default {
         0% 70%,
         0 0
       );
+      display: block;
+      height: 48px;
+      position: absolute;
+      right: -16px;
+      top: 50%;
+      width: 16px;
 
       &:hover {
         cursor: pointer;
@@ -186,11 +185,11 @@ export default {
     &__item {
       background: #fff;
       border-radius: 8px;
-      text-align: center;
-      width: 100%;
       margin: 4px 2px;
       padding: 2px;
       position: relative;
+      text-align: center;
+      width: 100%;
 
       &:hover {
         cursor: pointer;
@@ -199,53 +198,52 @@ export default {
       &::after {
         background: {
           image: url("../assets/icons/active.png");
-          repeat: no-repeat;
           position: center center;
+          repeat: no-repeat;
           size: 16px 16px;
         }
-
         content: "";
         display: block;
-        position: absolute;
-        top: 4px;
-        right: 8px;
-        width: 16px;
         height: 16px;
+        position: absolute;
+        right: 8px;
+        top: 4px;
         transform: rotate(180deg);
+        width: 16px;
       }
     }
 
     .items-list {
       display: grid;
       grid: {
-        template-columns: repeat(auto-fit, minmax(150px, 1fr));
         auto-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 1.5rem;
+        template-columns: repeat(auto-fit, minmax(150px, 1fr));
       }
+      height: auto;
       justify-items: center;
       margin: 0;
       padding: 0;
       width: 100%;
-      height: auto;
 
       &__item {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         background: #fff;
         border: 2px solid #e5e8eb;
+        display: flex;
+        flex-direction: column;
+        height: 180px;
+        justify-content: space-between;
         max-width: 150px;
         text-align: center;
-        height: 180px;
       }
 
       &__img {
+        box-shadow: inset 10px 10px 50px #fff;
+        height: 150px;
         object-fit: cover;
         transition: opacity 0.25s ease-in-out;
         width: 100%;
-        box-shadow: inset 10px 10px 50px #fff;
         width: 150px;
-        height: 150px;
         &:hover {
           opacity: 0.7;
         }
@@ -254,22 +252,22 @@ export default {
   }
 
   .actions {
+    align-items: flex-end;
     background: #e5e8eb;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: space-between;
     padding: 1rem;
 
     .control {
+      align-items: center;
       display: flex;
       justify-content: center;
-      align-items: center;
 
       &-zoom {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
       }
 

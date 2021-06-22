@@ -33,11 +33,32 @@ export default {
 </script>
 
 <style lang="scss">
+@mixin icons($url) {
+  min-width: unset;
+  position: relative;
+  width: auto;
+
+  &::after {
+    background: {
+      image: url($url);
+      position: center center;
+      repeat: no-repeat;
+      size: 16px 16px;
+    }
+    content: "";
+    display: block;
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+    width: 16px;
+  }
+}
+
 .button {
   background: #fff;
   border: 2px #f7f6f2 solid;
   border-radius: 4px;
-  padding: 12px;
   color: #000;
   font: {
     size: 16px;
@@ -45,54 +66,19 @@ export default {
     weight: 500;
   }
   min-width: 60px;
+  padding: 12px;
 
   &:hover {
-    cursor: pointer;
     background: #f7f6f2;
+    cursor: pointer;
   }
 
   &.minus {
-    position: relative;
-    width: auto;
-    min-width: unset;
-
-    &::after {
-      background: {
-        image: url("../assets/icons/minus.png");
-        repeat: no-repeat;
-        position: center center;
-        size: 16px 16px;
-      }
-      content: "";
-      display: block;
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      width: 16px;
-      height: 16px;
-    }
+    @include icons("../assets/icons/minus.png");
   }
 
   &.plus {
-    position: relative;
-    min-width: unset;
-    width: auto;
-
-    &::after {
-      background: {
-        image: url("../assets/icons/plus.png");
-        repeat: no-repeat;
-        position: center center;
-        size: 16px 16px;
-      }
-      content: "";
-      display: block;
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      width: 16px;
-      height: 16px;
-    }
+    @include icons("../assets/icons/plus.png");
   }
 
   &.move {
