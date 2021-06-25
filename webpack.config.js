@@ -55,16 +55,26 @@ module.exports = {
               esModule: false
             }
           },
-          "css-loader",
           {
-            loader: "postcss-loader",
+            loader: "css-loader",
             options: {
-              postcssOptions: {
-                plugins: () => [autoprefixer()]
-              }
+              sourceMap: true
             }
           },
-          "sass-loader"
+          /* {
+              loader: "postcss-loader",
+              options: {
+                postcssOptions: {
+                  plugins: () => [autoprefixer()]
+                }
+              }
+            }, */
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true
+            }
+          }
         ]
       }
     ]

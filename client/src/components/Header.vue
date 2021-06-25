@@ -34,6 +34,7 @@ export default {
   height: 100px;
   justify-content: flex-end;
   padding: 0 140px;
+  position: relative;
 
   &::before {
     background: {
