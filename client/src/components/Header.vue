@@ -24,7 +24,7 @@ export default {
 <style lang="scss">
 .header {
   align-items: center;
-  background: #9a9996;
+  background: #242a2e;
   color: #fff;
   display: flex;
   grid: {

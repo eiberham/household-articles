@@ -77,6 +77,7 @@ export default {
     column: 1 / 2;
   }
   justify-content: center;
+  max-width: 100px;
 
   .menu {
     width: 100%;

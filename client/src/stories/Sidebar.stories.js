@@ -2,7 +2,7 @@ import { storiesOf } from "@storybook/vue";
 
 import Sidebar from "../components/Sidebar.vue";
 
-storiesOf("Sidebar", module).add("Default Sidebar", () => ({
+storiesOf("Sidebar", module).add("Default", () => ({
   title: "Components/Sidebar",
   components: {
     Sidebar
