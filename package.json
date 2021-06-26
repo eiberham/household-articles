@@ -26,6 +26,7 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@storybook/addon-actions": "^6.3.0",
+    "@storybook/addon-controls": "^6.3.0",
     "@storybook/addon-essentials": "^6.3.0",
     "@storybook/addon-links": "^6.3.0",
     "@storybook/addon-postcss": "^2.0.0",

@@ -1,11 +1,19 @@
-import { storiesOf } from "@storybook/vue";
-
+import { action } from "@storybook/addon-actions";
 import Header from "../components/Header.vue";
 
-storiesOf("Header", module).add("Default", () => ({
+export default {
   title: "Components/Header",
-  components: {
-    Header
-  },
-  template: "<Header></Header>"
-}));
+  component: Header
+};
+
+/**
+ * @param args
+ * @param root0
+ * @param root0.argTypes
+ * @returns {object}
+ */
+export const Default = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Header },
+  template: `<Header />`
+});
